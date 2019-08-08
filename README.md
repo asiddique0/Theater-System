@@ -1,1 +1,1 @@
-A Java EE 7 project that simulates the online movie ticketing system
+A Java EE 7 project that simulates an online movie ticketing system
