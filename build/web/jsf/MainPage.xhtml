@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+        <h:head>
+            <title>Theaters</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+            <link rel="stylesheet" href="css/main.css" />
+        </h:head>
+        <h:body class="body" style="background-color: #F1F1F2">
+            <p:layout fullPage="true">
+                <p:layoutUnit position="center" style="background-color: #A1D6E2">
+                    <h:form>
+                        <h:outputLabel value="Zip" style="display: block; margin-left: auto; margin-right: auto; text-align: center"/> <br />
+                        <h:inputText value="#{mainPageBean.zip}" size="5" required="true"
+                                     id="zip" style="display: block; margin-left: auto; margin-right: auto;"
+                                     validator="#{mainPageBean.validate}" disabled="#{mainPageBean.zip}" >
+                        </h:inputText>    
+                        <br />
+                        <p:commandButton value="Submit" action="#{mainPageBean.nextPage()}" icon="pi pi-check"
+                                         style="display: block; margin-left: auto; margin-right: auto;">
+                        </p:commandButton>
+                        <br /> <br />
+                        <br /> <br />
+                        <p:row> 
+                            <h:outputText value="Enter your zip code to see theaters near you!"
+                                          style="display: block; margin-left: auto; margin-right: auto; text-align: center;
+                                                 font-family: sans-serif" />
+                        </p:row>
+                    </h:form>
+                </p:layoutUnit>
+                <p:layoutUnit position="north" style="background: #A1D6E2; background-color: #A1D6E2;">
+                    <br />
+<!--                    <h:outputLabel value="AMC Theatres" style="display: block; margin-left: auto; margin-right: auto; text-align: center;
+                                   font-family: sans-serif; font-size: 26px"/> -->
+                    <h:graphicImage value="images/amc.png" width="300" height="117" style="display: block; margin-left: auto; margin-right: auto;">
+                    </h:graphicImage>
+                </p:layoutUnit>
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true"
+                              style="background: #A1D6E2; background-color: #A1D6E2;" >
+                    <h:outputLabel value="© 2019 Abdullah Siddique" style="display: block; margin-left: auto; margin-right: auto; text-align: center"/> 
+                    <br />
+                    <h:outputLabel value="All Rights Reserved" style="display: block; margin-left: auto; margin-right: auto; text-align: center"/> 
+                </p:layoutUnit>  
+            </p:layout>
+        </h:body>
+</html>
+
